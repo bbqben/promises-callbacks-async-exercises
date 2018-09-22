@@ -15,7 +15,7 @@ pokeApp.findPokemon = (pokemonName) => {
     })
 }
 
-pokeApp.catchAllPokemon = () => {
+pokeApp.catchAllPokemon = async () => {
     pokeApp.findPokemon('ditto').then((data) => {
         pokeApp.catchPokemon(data);
     })

@@ -12,3 +12,5 @@
 3. Show Fix using promise with `main3-1.js` (Reference `main3-2.js`)
    - Demonstrate how to use promises and how it fixes CallBackHell
      - Benefits: Able to flatten and easier organize the code with promises in comparison to callback
+
+script(src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,fetch,es6")
