@@ -4,7 +4,6 @@ pokeApp.pokemonBox = [];
 pokeApp.baseUrl = "https://pokeapi.co/api/v2/pokemon/";
 /* SETUP */
 
-
 pokeApp.findPokemon = (pokemonName) => {
     return $.ajax({
         url: pokeApp.baseUrl + pokemonName,
@@ -16,40 +15,33 @@ pokeApp.findPokemon = (pokemonName) => {
 }
 
 pokeApp.catchAllPokemon = async () => {
-    pokeApp.findPokemon('ditto').then((data) => {
-        pokeApp.catchPokemon(data);
-    })
-    pokeApp.findPokemon('zapdos').then((data) => {
-        pokeApp.catchPokemon(data);
-    })
-    pokeApp.findPokemon('mewtwo').then((data) => {
-        pokeApp.catchPokemon(data);
-    })
-}
+    const pokemon1 = await pokeApp.findPokemon('123');
+    pokeApp.transferPokemonToPc(pokemon1);
+    const pokemon2 = await pokeApp.findPokemon('32');
+    pokeApp.transferPokemonToPc(pokemon2);
+    const pokemon3 = await pokeApp.findPokemon('88');
+    pokeApp.transferPokemonToPc(pokemon3);
+};
 
-pokeApp.init = () => {
+
+pokeApp.init = async () => {
+
     await pokeApp.catchAllPokemon();
+
     pokeApp.sendToDaycare();
-}
+};
 
-
-
-
-
-
-
-
-pokeApp.catchPokemon = (pokemon) => {
+pokeApp.transferPokemonToPc = pokemon => {
     pokeApp.pokemonBox.push(pokemon);
-}
+};
 
 pokeApp.sendToDaycare = () => {
     pokeApp.pokemonBox.map((pokemon, index) => {
-        const selectedPokemon = '#pokemon' + (index + 1) + ' img';
-        const pokemonImage = './images/' + pokemon + '.png';
-        $(selectedPokemon).attr('src', pokemonImage);
-    })
-}
+        const selectedPokemon = "#pokemon" + (index + 1) + " img";
+        const pokemonImage = "./images/" + pokemon + ".png";
+        $(selectedPokemon).attr("src", pokemonImage);
+    });
+};
 
 $(() => {
     pokeApp.init();

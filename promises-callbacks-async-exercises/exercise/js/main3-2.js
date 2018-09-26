@@ -34,7 +34,7 @@ pokeApp.catchAllPokemon = () => {
 
     return Promise.all([promise1, promise2, promise3]).then((pokemonList) => {
         pokemonList.map((pokemon) => {
-            pokeApp.catchPokemon(pokemon);
+            pokeApp.transferPokemonToPc(pokemon);
         })
     })
 }
@@ -52,7 +52,7 @@ pokeApp.init = () => {
 
 
 
-pokeApp.catchPokemon = (pokemon) => {
+pokeApp.transferPokemonToPc = (pokemon) => {
     pokeApp.pokemonBox.push(pokemon);
 }
 

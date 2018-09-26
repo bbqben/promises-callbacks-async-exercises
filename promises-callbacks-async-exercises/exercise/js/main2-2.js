@@ -17,11 +17,11 @@ pokeApp.findPokemon = (pokemonName) => {
 
 pokeApp.catchAllPokemon = () => {
     pokeApp.findPokemon('ditto').then((data) => {
-        pokeApp.catchPokemon(data, () => {
+        pokeApp.transferPokemonToPc(data, () => {
             pokeApp.findPokemon('zapdos').then((data) => {
-                pokeApp.catchPokemon(data, () => {
+                pokeApp.transferPokemonToPc(data, () => {
                     pokeApp.findPokemon('mewtwo').then((data) => {
-                        pokeApp.catchPokemon(data, () => {
+                        pokeApp.transferPokemonToPc(data, () => {
                             pokeApp.sendToDaycare();
                         });
                     })
@@ -42,7 +42,7 @@ pokeApp.init = () => {
 
 
 
-pokeApp.catchPokemon = (pokemon, callBack) => {
+pokeApp.transferPokemonToPc = (pokemon, callBack) => {
     pokeApp.pokemonBox.push(pokemon);
     callBack && callBack();
 }
