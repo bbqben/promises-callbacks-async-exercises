@@ -39,6 +39,7 @@ pokeApp.init = () => {
 
 
 
+
 pokeApp.catchPokemon = (pokemon) => {
     pokeApp.pokemonBox.push(pokemon);
 }
