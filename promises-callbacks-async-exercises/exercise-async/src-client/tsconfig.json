@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "baseUrl": "./app",
+        "experimentalDecorators": true,
+        "forceConsistentCasingInFileNames": true,
+        "jsx": "react",
+        "lib": ["es6", "dom", "es2017"],
+        "module": "esNext",
+        "moduleResolution": "node",
+        "noImplicitAny": false,
+        // "noImplicitReturns": true,
+        // "noImplicitThis": true,
+        // "noUnusedLocals": true,
+        "outDir": "../dist",
+        "rootDir": "./",
+        // "sourceMap": true,
+        // "strictNullChecks": true,
+        // "suppressImplicitAnyIndexErrors": true,
+        "target": "es5",
+    },
+    "exclude": [
+        "node_modules",
+        "build",
+        "scripts",
+        "acceptance-tests",
+        "webpack",
+        "jest",
+        "app/setupTests.ts"
+    ]
+}

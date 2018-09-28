@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+    mode: 'development',
     entry: './js/main.js',
     output: {
         filename: 'main.js',
@@ -12,7 +13,8 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, '../dist'),
         compress: true,
-        port: 9000
+        port: 9000,
+        open: true
     }
 };
 

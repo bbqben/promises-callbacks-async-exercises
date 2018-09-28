@@ -1,0 +1,26 @@
+{
+  "name": "@soulfx/build",
+  "preferGlobal": false,
+  "bin": {
+    "sfx-cli": "./index.js"
+  },
+  "version": "0.1.0",
+  "description": "Soulfx's all-in-one build configuration",
+  "repository": {
+    "url": "https://github.com/SoulfxTechnologies/SFX_React-Boilerplate.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.17.1",
+    "fs-extra": "^7.0.0",
+    "inquirer": "^6.1.0",
+    "npm": "^6.0.0",
+    "shelljs": "^0.8.2"
+  }
+}

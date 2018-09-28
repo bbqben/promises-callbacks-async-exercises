@@ -10,6 +10,9 @@ pokeApp.findPokemon = (pokemonName) => {
         url: pokeApp.baseUrl + pokemonName,
         method: "GET",
         dataType: "JSON",
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+        }
     }).then((response) => {
         return (response.id);
     })

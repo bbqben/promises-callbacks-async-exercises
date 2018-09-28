@@ -1,0 +1,64 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no")
+        meta(name="theme-color" content="#0789b9") 
+        link(rel="shortcut icon" href="/images/favicon.png")
+        script(src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,fetch,es6")
+        link(href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:300,400,600|Rokkitt" rel="stylesheet")                        
+        script(src="/js/polyfills.js")
+        script svg4everybody();
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/7.0.6/jquery.mmenu.all.js")
+        //- script(src="/js/vendor.js")
+
+        style.
+            .daycare {
+                background-image: url('../images/background.png');
+                z-index: -1;
+                height: 600px;
+                width: 800px;
+                position: relative;
+            }
+            .pokemonWrapper img {
+                width: 175px;
+                height: 175px;
+            }
+            img[src="#"] {
+                display: none;
+            }
+            #pokemon1,
+            #pokemon2,
+            #pokemon3 {
+                position: absolute;
+            }
+            #pokemon1 {
+                left: 20px;
+                top: 30px;
+            }
+            #pokemon2 {
+                left: 400px;
+                top: 400px;
+            }
+            #pokemon3 {
+                left: 500px;
+                top: 100px;
+            }
+
+
+        title Sfx React Boilerplate
+    body        
+        div#root
+            noscript You need to enable JavaScript to run this application.
+
+
+        .daycare
+            #pokemon1.pokemonWrapper
+                img(src='#')
+            #pokemon2.pokemonWrapper
+                img(src='#')
+            #pokemon3.pokemonWrapper
+                img(src='#')
+
+
